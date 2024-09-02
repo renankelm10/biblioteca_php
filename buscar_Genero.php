@@ -10,8 +10,9 @@ if ($conn->connect_error) {
             $buscar = $conn->real_escape_string($buscar);
 
 
-                $sql = "SELECT * FROM users WHERE name LIKE '%$buscar%'";
-                $result = $conn->query($sql);
+
+                $sql = "SELECT * FROM users WHERE Genero LIKE '%$buscar%'";
+                $result = $conn->query($sql); 
             
                 if ($result->num_rows > 0) {
 

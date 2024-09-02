@@ -110,14 +110,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  } }
             ?> 
 <html>
+    <head>
+       
+    </head>
     <body>
-    <form action="buscar_livro.php" method="POST">
-    <h2>Buscar livro:</h2>
-    <input type="text" id="buscar" name="buscar" placeholder="Titulo do livro"> 
-    <button action="submit" value="forms2">buscar</button>
-    
-
-    </form>
+        <div id="a2">
+        <form action="buscar_livro.php" method="POST">
+        <h2>Buscar livro por Titulo:</h2>
+        <input type="text" id="buscar" name="buscar" placeholder="Titulo do livro"> 
+        <button action="submit" value="forms2">buscar</button>
+        </form>
+        </div>
+        <div id="a3">
+        <form action="buscar_Genero.php" method="POST">
+        <h2>Buscar livro por Genero:</h2>
+        <input type="text" id="buscar" name="buscar" placeholder="Titulo do livro"> 
+        <button action="submit" value="forms2">buscar</button>
+        </form>
+        </div>
 </body>
 </html>
 
