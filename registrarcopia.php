@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
     $stmt = $conn->prepare("INSERT INTO users (name, email, Genero, data) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("sssd", $titulo, $author, $genre, $date);
+    $stmt->bind_param("ssss", $titulo, $author, $genre, $date);
 
     if ($stmt->execute()) {
         header('Location: registrarcopia.php');
