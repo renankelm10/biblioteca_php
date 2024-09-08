@@ -38,16 +38,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin-left: 50px;
             color: green;
     }
+body{
+background-color: bisque;
 
+}
+ 
+
+
+#body {
+    
+    height: 2px;
+    max-width: 500px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 24px;
+    padding: 0;
+    margin: 20px !important;
+    text-align: center;
+} 
+
+#body2 {
+    
+    max-width: 400px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin-left: auto !important;
+    margin-right: 200px;
+    text-align: center;
+}
 
     </style>
 </head>
 <body>
     <a href="index.php">voltar</a>
-    <h2>Inserir</h2>
+    <br><br>
+    <div id="body">
+        
+    <h2>Inserir livro:</h2>
     <form action="" method="post">
         <label for="Titulo">Titulo:</label>
-        <input type="text" id="Titulo" name="Titulo" required><br><br>
+        <input type="text" id="Titulo" name="Titulo" required placeholder="Escreva o Titulo do livro"><br><br>
         <label>Autor:</label>
         <select id="autor_id" name="autor_id" required>
             
@@ -71,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ?>
         </select><br><br>
         <label for="data1">Data de lançamento:</label>
-        <input type="text" name="data1">
+        <input type="text" name="data1" placeholder="       --/--/----">
         <br><br>
         
         <input id="botaoai" type="submit" value="Salvar">
@@ -116,22 +146,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body>
         <div id="a2">
         <form action="buscar_livro.php" method="POST">
-        <h2>Buscar livro por Titulo:</h2>
+        <h2>Buscar livro:</h2>
         <input type="text" id="buscar" name="buscar" placeholder="Titulo do livro"> 
         <button action="submit" value="forms2">buscar</button>
-        </form>
+        </form><br>
         </div>
         <div id="a3">
         <form action="buscar_Genero.php" method="POST">
-        <h2>Buscar livro por Genero:</h2>
-        <input type="text" id="buscar" name="buscar" placeholder="Titulo do livro"> 
+        <select id="buscar" name="buscar" required>
+            <?php
+            include_once '../config.php';
+            $result = $conn->query("SELECT * FROM genre");
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='{$row['Genero']}'>{$row['Genero']}</option>";
+            }
+            ?>
+        </select>
         <button action="submit" value="forms2">buscar</button>
         </form>
         </div>
 </body>
 </html>
+    </div>
+    
 
-
+<div id="body2">
 <?php
 $sql = "SELECT name, email, Genero , data FROM users";
     $result = $conn->query($sql);
@@ -164,3 +203,5 @@ $sql = "SELECT name, email, Genero , data FROM users";
     </table>
 </body>
 </html>
+
+</div>

@@ -25,28 +25,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Inserir Dados</title>
+
+    <style>
+
+body{
+background-color: bisque;
+
+}
+        #body {
+    
+    height: 2px;
+    max-width: 500px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 24px;
+    padding: 0;
+    margin: 20px !important;
+    text-align: center;
+} 
+#body2 {
+    
+    max-width: 400px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin-left: auto !important;
+    margin-right: 200px;
+    text-align: center;
+}
+
+    </style>
 </head>
 <body>
     
     <a href="index.php">voltar</a>
-    <h2>Autores</h2>
-    <form action="" method="post">
-        
-        
-        <label for="Autorcad">Cadastrar Autor:</label>
-        <input type="text" id="Autorcad" name="Autorcad" required><br><br>
+   <div id="body">
+        <h2>Autores</h2>
+            <form action="" method="post">
+                
+                
+                <label for="Autorcad">Cadastrar Autor:</label>
+                <input type="text" id="Autorcad" name="Autorcad" required><br><br>
 
-        <label for="Autor">Biografia:</label>
-        <input type="text" id="bio" name="bio" required><br><br>
+                <label for="Autor">Biografia:</label>
+                <input type="text" id="bio" name="bio" required><br><br>
 
 
-        <input type="submit" value="Salvar" style="margin: 30px;">
-        
-        
-    </form>
-</body>
-</html>
+                <input type="submit" value="Salvar" style="margin: 30px;">
+                
+                
+            </form>
+        </body>
+        </html>
 
+
+   </div>
+<div id="body2">
 <?php
 
 $sql = "SELECT name, bio FROM authors";
@@ -76,3 +109,6 @@ $result = $conn->query($sql);
     </table>
 </body>
 </html>
+
+
+</div>

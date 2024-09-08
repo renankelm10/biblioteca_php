@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -36,20 +37,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: green;
     }
 
+    body{
+background-color: bisque;
+
+}
+ 
+
+
+#body {
+    
+    height: 2px;
+    max-width: 500px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 24px;
+    padding: 0;
+    margin: 20px !important;
+    text-align: center;
+} 
+
+#body2 {
+    
+    max-width: 400px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin-left: auto !important;
+    margin-right: 200px;
+    text-align: center;
+}
+
+
 
     </style>
 </head>
 <body>
-    <a href="index.php">voltar</a>
-    <h2>Inserir</h2>
-    <form action="" method="post">
-        <label for="email">Genero:</label>
-        <input type="text" id="genero" name="genero" required><br><br>
-        <br>
-        <input id="botaoai" type="submit" value="Salvar">
-        <br>
-        <form action=""></form>
-    </form>
+ <a href="index.php">voltar</a>  
+  <div id="body">
+        
+            <h2>Inserir Genero</h2>
+            <form action="" method="post">
+                <label for="email">Genero:</label>
+                <input type="text" id="genero" name="genero" required><br><br>
+                <br>
+                <input id="botaoai" type="submit" value="Salvar">
+                <br>
+                <form action=""></form>
+            </form>
+
+
+    </div>
+   
     
 </body>
 </html>
@@ -68,7 +105,8 @@ $conn->close();
     <title>Lista de Registros</title>
 </head>
 <body>
-    <h2>Lista de Generos</h2>
+    <div id="body2">
+ <h2>Lista de Generos</h2>
     <table border="1">
         <tr>
             <th>Genero</th>
@@ -79,5 +117,8 @@ $conn->close();
             </tr>
         <?php endwhile; ?>
     </table>
+
+    </div>
+   
 </body>
 </html>

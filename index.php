@@ -10,6 +10,28 @@ include 'config.php';
     <title>Biblioteca fonceca</title>
 
     <style>
+    html, body {
+    height: 100%;
+}
+
+body {
+    background-color: bisque;
+    max-width: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    padding: 0;
+    margin: 0 auto !important;
+    text-align: center;
+}
+button{
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 
 
