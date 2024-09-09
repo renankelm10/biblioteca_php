@@ -74,7 +74,7 @@ background-color: bisque;
  <a href="index.php">voltar</a>  
   <div id="body">
         
-            <h2>Inserir Genero</h2>
+            <h2>Inserir Gênero</h2>
             <form action="" method="post">
                 <label for="email">Genero:</label>
                 <input type="text" id="genero" name="genero" required><br><br>
@@ -106,10 +106,10 @@ $conn->close();
 </head>
 <body>
     <div id="body2">
- <h2>Lista de Generos</h2>
+ <h2>Lista de Gêneros</h2>
     <table border="1">
         <tr>
-            <th>Genero</th>
+            <th>Gênero</th>
         </tr>
         <?php while($row = $result->fetch_assoc()): ?>
             <tr>  

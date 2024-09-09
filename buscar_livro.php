@@ -31,7 +31,7 @@ if ($conn->connect_error) {
         <tr>
             <th>Titulo</th>
             <th>Autor</th>
-            <th>Genero</th>
+            <th>Gênero</th>
             <th>Data de lançamento</th>
 
         </tr>

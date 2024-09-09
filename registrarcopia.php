@@ -90,7 +90,7 @@ background-color: bisque;
             ?>
         </select><br><br>
 
-        <label for="email">Genero:</label>
+        <label for="email">Gênero:</label>
         <select id="genero_id" name="genero_id" required>
             <?php
             include_once '../config.php';
@@ -162,7 +162,7 @@ background-color: bisque;
             }
             ?>
         </select>
-        <button action="submit" value="forms2">buscar</button>
+        <button action="submit" value="forms2">Buscar</button>
         </form>
         </div>
 </body>
@@ -189,7 +189,7 @@ $sql = "SELECT name, email, Genero , data FROM users";
         <tr>
             <th>Titulo</th>
             <th>Autor</th>
-            <th>Genero</th>
+            <th>Gênero</th>
             <th>Data de lançamento</th>
         </tr>
         <?php while($row = $result->fetch_assoc()): ?>

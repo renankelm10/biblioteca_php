@@ -51,7 +51,7 @@ button{
     </form>
     <br>
     <form action="registrargenero.php">
-        <button action="submit">Registrar Genero</button>
+        <button action="submit">Registrar Gênero</button>
     </form>
      
 </body>
